@@ -54,7 +54,10 @@ module.exports = (grunt) ->
 
         concat:
             vendor_js:
-                src: []
+                src: [
+                    "app/bower_components/angular/angular.js"
+                    "app/bower_components/angular-route/angular-route.js"
+                ]
                 dest: outdir + "/js/vendor.js"
 
             app_js:
