@@ -1,7 +1,12 @@
+*.ipr
+*.iml
+*.iws
+.idea
+node_modules
+bower_components/
+public
+app/css/_*.css
+app/js/_*.js
 logs/*
 !.gitkeep
-node_modules/
-bower_components/
 tmp
-.DS_Store
-.idea
