@@ -8,13 +8,20 @@ module.exports = (grunt) ->
                     "app/css/_app_less.css": "app/less/*.less"
 
         coffee:
-            compile:
+            app:
                 options:
                     join: true
-
                 files:
                     "app/js/_app_coffee.js": "app/coffee/*.coffee"
+            e2e:
+                options:
+                    join: true
+                files:
                     "test/js/e2e/_tests.js": "test/coffee/e2e/*.coffee"
+            unit:
+                options:
+                    join: true
+                files:
                     "test/js/unit/_tests.js": "test/coffee/unit/*.coffee"
 
         uglify:
@@ -85,12 +92,23 @@ module.exports = (grunt) ->
                 files: ["app/less/*.less"]
                 tasks: ["less"]
 
-            coffee:
+            coffee_app:
                 files: [
                     "app/coffee/**/*.coffee"
-                    "test/coffee/**/*.coffee"
                 ]
-                tasks: ["coffee"]
+                tasks: ["coffee:app"]
+
+            coffee_e2e:
+                files: [
+                    "test/coffee/e2e/**/*.coffee"
+                ]
+                tasks: ["coffee:e2e"]
+
+            coffee_unit:
+                files: [
+                    "test/coffee/unit/**/*.coffee"
+                ]
+                tasks: ["coffee:unit"]
 
             vendor_js:
                 files: ["lib/**/*.js"]
