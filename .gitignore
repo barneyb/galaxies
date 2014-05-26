@@ -8,5 +8,6 @@ public
 app/css/_*.css
 app/js/_*.js
 logs/*
+npm-debug.log
 !.gitkeep
 tmp
