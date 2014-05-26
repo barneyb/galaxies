@@ -5,8 +5,8 @@
 node_modules
 bower_components/
 public
-app/css/_*.css
-app/js/_*.js
+_*.css
+_*.js
 logs/*
 npm-debug.log
 !.gitkeep
