@@ -169,8 +169,7 @@ module.exports = (grunt) ->
         "concat"
         "copy:static"
     ]
-    grunt.registerTask "default", ["build"]
-    grunt.registerTask "client", [
+    grunt.registerTask "default", [
         "build"
         "watch"
     ]
@@ -181,5 +180,4 @@ module.exports = (grunt) ->
         "cssmin"
         "htmlmin"
     ]
-    grunt.registerTask "deploy", ["exec:deploy"]
     return
